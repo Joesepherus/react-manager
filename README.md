@@ -7,10 +7,11 @@ A node module tool for creating and deleting react components.
     npm install -g react-manager
 
 ## Usage
-
-    react-manager --new $ComponentName     /* Create a new react component with the name $ComponentName */__
-
-    react-manager --remove $ComponentName    /* Remove a component with the name $ComponentName */
+    /* Create a new react component with the name $ComponentName */  
+    react-manager --new $ComponentName     
+  
+    /* Remove a component with the name $ComponentName */  
+    react-manager --remove $ComponentName    
 
 
 ## Help
