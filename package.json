@@ -1,0 +1,34 @@
+{
+  "name": "react-manager",
+  "version": "1.0.6",
+  "description": "a node module tool for creating and deleting react components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-manager": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joesepherus/react-manager.git"
+  },
+  "keywords": [
+    "cli",
+    "components",
+    "generator",
+    "react"
+  ],
+  "author": "Joesepherus <\u001bh Maloch\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[\u001b[\u001b[C\u001b[C\u001b[C\u001b\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001bor: Joeseph Maloch <joesephmaloch@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "command-line-args": "^5.0.2",
+    "command-line-usage": "^5.0.5",
+    "fs-extra": "^6.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/Josepherus/react-manager/issues"
+  },
+  "homepage": "https://github.com/Joesepherus/react-manager#readme",
+  "bin": {
+    "react-manager": "./index.js"
+  }
+}
