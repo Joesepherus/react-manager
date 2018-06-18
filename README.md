@@ -54,7 +54,7 @@ Creates a folder inside it a .js and .scss file with the name $componentName
 
 Contributions to this project are welcome and will be recognized here, feel free to create an issue with additional functionality to speed React development.
 
-Open an issue or fork the repo here [react-manager on Github](https://github.com/Josepherus/react-manager "react-manager on Github")
+Open an issue or fork the repo here [react-manager on Github](https://github.com/Joesepherus/react-manager "react-manager on Github")
 
 
 ## License
