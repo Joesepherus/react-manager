@@ -20,16 +20,17 @@ A node module tool for creating and deleting react components.
 
 ## Code Examples
 
-### Create Components using 'comp'
+### 1. Create a React Component and Sass file
 
 **Command Line**
 
-    react-manager --new $ComponentName
+    react-manager --newSass $ComponentName
 
 **Output**
 Creates a folder inside it a .js and .scss file with the name $componentName 
     
     import React, { Component } from 'react'
+    import './$componentName.css';
     
     class $ComponentName extends Component {
       constructor(props){
@@ -39,15 +40,91 @@ Creates a folder inside it a .js and .scss file with the name $componentName
       }
   
       render(){
+
         return (
-          <div>
+          <div className='$componentName'>
             <h1>$ComponentName</h1>
           </div>
         )
       }
     }
     
-    export default $ComponentName
+    export default $ComponentName;
+
+### 2. Create a React MUI Component 
+
+**Command Line**
+
+    react-manager --newMui $ComponentName
+
+**Output**
+Creates a folder inside it a .js file with the name $componentName 
+    
+    import React, { Component } from 'react'
+    import { withStyles } from '@material-ui/core/styles';
+    
+    const styles = theme => ({
+      red: {
+        backgroundColor: 'red'
+      }
+    })
+
+    class $ComponentName extends Component {
+      constructor(props){
+        super(props) 
+        this.state = {      
+        }
+      }
+  
+      render(){
+        const { classes } = this.props;
+
+        return (
+          <div className={classes.red}>
+            <h1>$ComponentName</h1>
+          </div>
+        )
+      }
+    }
+    
+    export default withStyles(styles)($ComponentName);
+
+### 3. Create a React Aphrodite Component 
+
+**Command Line**
+
+    react-manager --newAphro $ComponentName
+
+**Output**
+Creates a folder inside it a .js file with the name $componentName 
+    
+    import React, { Component } from 'react'
+    import { StyleSheet, css } from 'aphrodite';
+    
+    const styles = Stylesheet.create({
+      red: {
+        backgroundColor: 'red'
+      }
+    })
+
+    class $ComponentName extends Component {
+      constructor(props){
+        super(props) 
+        this.state = {      
+        }
+      }
+  
+      render(){
+
+        return (
+          <div className={css(styles.red)}>
+            <h1>$ComponentName</h1>
+          </div>
+        )
+      }
+    }
+    
+    export default $ComponentName;
     
 
 ## Contributors

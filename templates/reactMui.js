@@ -4,7 +4,13 @@ module.exports = function (componentName) {
 
   `  
 import React, { Component } from 'react';
-import './` + componentName + `.css';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = theme => ({
+  red: {
+    backgroundColor: 'red'
+  }
+})
 
 class ` + componentName + ` extends Component {
   constructor(props) {
@@ -15,15 +21,16 @@ class ` + componentName + ` extends Component {
   }
 
   render() {
+    const { classes } = this.props;
     
     return (
-      <div className='` + componentName + `'>
+      <div className={classes.red}>
         <h1>` + componentName + `</h1>
       </div>
     )
   }
 }
 
-export default ` + componentName + `;`
+export default withStyles(styles)(` + componentName + `);`
   )
 }

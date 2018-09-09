@@ -4,7 +4,13 @@ module.exports = function (componentName) {
 
   `  
 import React, { Component } from 'react';
-import './` + componentName + `.css';
+import { StyleSheet, css } from 'aphrodite';
+
+const styles = Stylesheet.create({
+  red: {
+    backgroundColor: 'red'
+  }
+})
 
 class ` + componentName + ` extends Component {
   constructor(props) {
@@ -17,7 +23,7 @@ class ` + componentName + ` extends Component {
   render() {
     
     return (
-      <div className='` + componentName + `'>
+      <div className={css(styles.red)}>
         <h1>` + componentName + `</h1>
       </div>
     )
